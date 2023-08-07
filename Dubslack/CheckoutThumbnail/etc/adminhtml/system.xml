@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="checkout">
+            <group id="dubslack" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1">
+                <label>Checkout Item Thumbnail</label>
+                <field id="thumbnail" translate="label" type="image" sortOrder="10" showInDefault="1"
+                       showInWebsite="1">
+                    <label>Placeholder Image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">catalog/cart/thumbnail</upload_dir>
+                    <base_url type="media">catalog/cart/thumbnail</base_url>
+                    <comment>Set a default thumbnail in the checkout to be applied when the product image is not set.
+                    </comment>
+                </field>
+                <field id="height" translate="label comment" type="text" sortOrder="20" showInDefault="1"
+                       showInWebsite="1">
+                    <label>Height</label>
+                    <validate>validate-digits validate-digits-range digits-range-1-150</validate>
+                    <comment>The height (px) needs to range from 1 to 150.
+                    </comment>
+                </field>
+                <field id="width" translate="label comment" type="text" sortOrder="30" showInDefault="1"
+                       showInWebsite="1">
+                    <label>Width</label>
+                    <validate>validate-digits validate-digits-range digits-range-1-150</validate>
+                    <comment>The width (px) needs to range from 1 to 150.
+                    </comment>
+                </field>
+                <field id="alt" translate="label comment" type="text" sortOrder="40" showInDefault="1"
+                       showInWebsite="1">
+                    <label>Alt</label>
+                    <comment>Specifies an alternate text for an image, if the image cannot be displayed.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
