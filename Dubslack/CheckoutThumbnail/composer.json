@@ -1,0 +1,28 @@
+{
+  "name": "Dubslack/CheckoutThumbnail",
+  "description": "Set a default thumbnail image for products in the cart",
+  "require": {
+    "php": "^8",
+    "magento/framework": "^103"
+  },
+  "type": "magento2-module",
+  "version": "1.0.1",
+  "authors": [
+    {
+      "name": "Mike Dubinsky",
+      "email": "support@dubslack.com"
+    }
+  ],
+  "license": [
+    "MIT"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Dubslack\\CheckoutThumbnail\\": ""
+    }
+  }
+}
+
